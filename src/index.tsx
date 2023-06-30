@@ -12,5 +12,5 @@ if (container) {
 		</React.StrictMode>
 	)
 } else {
-	alert("Error, div disb't exist.")
+	alert("Error, div doesn't exist.")
 }

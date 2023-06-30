@@ -5,6 +5,7 @@ import { getAuthor } from '../api/authors'
 import { getBook } from '../api/books'
 import Author from '../models/Author'
 import Book from '../models/Book'
+import PostsForBook from '../components/PostsForBook'
 
 export default function Book() {
 	const { id } = useParams()
@@ -30,6 +31,8 @@ export default function Book() {
 				<>
 					<h1>{book.name}</h1>
 					by <span>{author ? author.name : 'unknown'}</span>
+					<h2>Comments for Book</h2>
+					<PostsForBook bookId={book.id} />
 				</>
 			) : (
 				'Loading data...'
